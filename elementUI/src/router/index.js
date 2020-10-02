@@ -22,9 +22,7 @@ const router = new Router({
         {path:'/course',name:'course',component:Course},
         {path:'/lesson',name: 'lesson',component: Lesson},
         {path:'/student',name:'student',component:Student},
-        {path:'/teacher',name:'teacher',component:Teacher ,children:[
-            {path:'/userInfo',name:'userInfo',component:userInfo}
-          ]},
+        {path:'/teacher',name:'teacher',component:Teacher},
         {path:'/date',name:'date',component:Date}
       ]
     },
