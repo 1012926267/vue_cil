@@ -560,7 +560,7 @@
         },
         /** 添加课程提交按钮 */
         submitForm() {
-          console.log(this.course_ids)
+          // console.log(this.course_ids)
           // console.log(this.courseIdList)
           this.$http.get("http://localhost:8081/attendance/course/addCourseByTeacherUsername?courses_id=" + this.course_ids + "&username=" + this.username).then(res => {
             if(res.data.success){
@@ -576,7 +576,7 @@
         },
         /** 添加学生提交按钮 */
         submitStudentForm() {
-          console.log(this.student_numbers)
+          // console.log(this.student_numbers)
           // console.log(this.courseIdList)
           this.$http.get("http://localhost:8081/attendance/student/addStudentById?id=" + this.id + "&students_number=" + this.student_numbers).then(res => {
             if(res.data.success){
@@ -608,7 +608,7 @@
           this.course_id = course_id;
           this.lesson_title = name;
           this.checkLesson = true;
-          console.log(this.queryStudentParams);
+          // console.log(this.queryStudentParams);
           this.getStudentList();
         },
         /** 删除按钮操作 */
@@ -711,8 +711,8 @@
         },
         // 筛选已有的学生数据
         hideStudentList(){
-          console.log(this.studentList)
-          console.log(this.allStudentList)
+          // console.log(this.studentList)
+          // console.log(this.allStudentList)
           const arr1 = filterStudentList(this.studentList, this.allStudentList)
           this.afterFilterStudentList = arr1;
           return arr1

@@ -267,7 +267,7 @@
               //当表单不含有主键编号时是添加课程
               else {
                 this.$http.post("http://localhost:8081/attendance/course/addCourse",this.form).then(res=>{
-                  console.log(res)
+                  // console.log(res)
                   if(res.data.success){
                     this.$message.success("添加成功");
                     this.open = false;
@@ -289,7 +289,7 @@
         /** 删除按钮操作 */
         handleDelete(row) {
           let _this = this;
-          console.log(row)
+          // console.log(row)
           const ids = row.id || this.ids;
           const course_names = row.course_name || this.courses;
           this.$confirm('是否确认删除课程名为"' + course_names + '"的数据项?', "警告", {

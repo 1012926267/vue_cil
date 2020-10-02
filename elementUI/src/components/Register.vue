@@ -55,15 +55,6 @@
         name: "Register",
       data(){
         return {
-/*          // 单选框
-          options:[{
-            value: '男',
-            label: '男'
-          },{
-            value: '女',
-            label: '女'
-          }
-          ],*/
           RegisterFrom:{
             username:'' ,
             password:"",
@@ -101,7 +92,7 @@
             if(valid){
               if (this.RegisterFrom.invite === "3369"){
                 this.$http.post("http://localhost:8081/attendance/teacher/register",this.RegisterFrom).then(res=>{
-                  console.log(res)
+                  // console.log(res)
                   if(res.data.state){
                     this.$message.success('注册成功')
                     this.$router.push('/login')

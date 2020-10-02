@@ -45,7 +45,7 @@
       watch:{
         username: function (val) {
           this.teacher_username = val
-          console.log(this.teacher_username)
+          // console.log(this.teacher_username)
          }
         },
       props:['username']

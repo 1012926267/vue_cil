@@ -50,11 +50,11 @@
             this.$refs[formName].validate( valid => {
               if (valid){
                 this.$http.post("http://localhost:8081/attendance/teacher/login",this.loginFrom).then(res=>{
-                  console.log(res);
+                  // console.log(res);
                   if (res.data.state){
                     this.$message.success('登陆成功')
                     window.sessionStorage.setItem('token',res.data.token)
-                    console.log(res.data.token)
+                    // console.log(res.data.token)
                     this.$router.push('/home')
                   }else {
                     return this.$message.error('登陆失败,用户名或密码不正确')
