@@ -286,13 +286,14 @@
               @click="handleDelete"
             >删除</el-button>
           </el-col>
-          <!--  <el-col :span="1.5">
+            <el-col :span="1.5">
               <el-button
-                type="warning"
-                icon="el-icon-download"
+                type="success"
+                icon="el-icon-s-claim"
                 size="mini"
-              >导出</el-button>
-            </el-col>-->
+                @click="startAttendance"
+              >开始考勤</el-button>
+            </el-col>
         </el-row>
       </div>
       <!--表格数据区域-->
@@ -307,6 +308,8 @@
           <el-table-column label="入学年份" align="center" prop="student_attendance" />
           <el-table-column label="专业" align="center" prop="student_profession" />
           <el-table-column label="性别" align="center" prop="student_sex" width="180"></el-table-column>
+<!--          暂时的考勤模块-->
+          <el-table-column label="状态" align="center" >{{attendance}}</el-table-column>
           <el-table-column label="操作" align="center" class-name="small-padding fixed-width">
             <template slot-scope="scope">
               <el-button
@@ -391,6 +394,8 @@
             label: '女'
           }
           ],
+          // 出勤状态
+          attendance: "待考勤",
           // 筛选后的课程数据
           afterFilterLessonList: [],
           // 筛选后的学生数据
@@ -529,6 +534,10 @@
         resetQuery(){
           this.resetForm("queryForm");
           this.handleQuery();
+        },
+        /** 开始考勤按钮 */
+        startAttendance(){
+          this.attendance = "待出勤"
         },
         /** 重置学生表格按钮 */
         resetStudentQuery(){
