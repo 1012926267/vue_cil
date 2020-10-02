@@ -8,9 +8,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import less from 'less';
 import "./assets/css/global.css"
-/*import VueCropper from "vue-cropper"
 
-Vue.use(vueCropper)*/
 Vue.use(less)
 Vue.use(ElementUI);
 
@@ -18,7 +16,6 @@ Vue.prototype.$http=axios;
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,

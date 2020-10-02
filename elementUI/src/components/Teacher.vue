@@ -42,10 +42,6 @@
             teacher_username:this.username
           }
       },
-  // created() {
-  //   console.log(this.username)
-  //         this.teacher_username = this.username
-  // },
       watch:{
         username: function (val) {
           this.teacher_username = val

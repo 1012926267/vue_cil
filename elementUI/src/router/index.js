@@ -8,7 +8,6 @@ import Student from "../components/Student";
 import Teacher from "../components/Teacher";
 import Date from "../components/Date";
 import Lesson from "../components/Lesson";
-import userInfo from "../components/userInfo";
 
 
 Vue.use(Router)
