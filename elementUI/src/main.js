@@ -8,12 +8,13 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import less from 'less';
 import "./assets/css/global.css"
+import global from './components/Global'
 
 Vue.use(less)
 Vue.use(ElementUI);
 
-Vue.prototype.$http=axios;
-
+Vue.prototype.$http= axios
+Vue.prototype.$global= global
 Vue.config.productionTip = false
 
 new Vue({

@@ -7,6 +7,7 @@
 <script>
 export default {
   name: 'App',
+  /** 页面部分刷新 */
   provide (){
     return {
       reload:this.reload
